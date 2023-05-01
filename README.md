@@ -25,10 +25,13 @@ Create handbrake preset for AV1 encoding
 2) Optional: Summary tab: set format to mkv
 3) Optional: Dimensions tab: set resolution limit one
 4) Video tab: set video encoder to "AV1 10-bit (Intel QSV)", Constant quality: 30 ICQ, Framerate: constant, Encoder preset: Quality, Encoder Profile: Auto, Encoder level: auto, Save as: pick location for test.
-5) In top menu: Presets: Add preset, choose desired audio and subtitle settings, click Add. Export the preset to file, save to the c:\tdarr directory
+5) Encode the video to test that the hardware encoding works, open task manager and check that the Intel Arc GPU is being utilized at least 50%. The AV1 encoding fps for 1080p video should be around 120fps on the a380, 2160p is around 30fps.
+6) In top menu: Presets: Add preset, choose desired audio and subtitle settings, click Add. Export the preset to file, save to the c:\tdarr directory
 
 Configure tdarr node:
 1) In the tdarr installation directory > configs, edit Tdarr_Node_config.json
 2) In "handbrakePath": replace "" with "C:/tdarr/HandBrakeCLI.exe", make sure to use forward slashes "/" or double "\\" for path. If you run the server on the same pc leave other settings the same, otherwise change the server ip.
 
 Configure the tdarr server:
+1) In the tdarr installation directory > Tdarr_Server folder Run the Tdarr_Server.exe
+2) In the tdarr installation directory > Tdarr_Node folder Run the Tdarr_Node.exe
