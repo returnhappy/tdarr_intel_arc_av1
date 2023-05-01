@@ -33,5 +33,10 @@ Configure tdarr node:
 2) In "handbrakePath": replace "" with "C:/tdarr/HandBrakeCLI.exe", make sure to use forward slashes "/" or double "\\" for path. If you run the server on the same pc leave other settings the same, otherwise change the server ip.
 
 Configure the tdarr server:
-1) In the tdarr installation directory > Tdarr_Server folder Run the Tdarr_Server.exe
+1) In the tdarr installation directory > Tdarr_Server folder Run the Tdarr_Server.exe, open your ip with the port (replace 0.0.0.0 with your ip, in windows cli run ipconfig) 0.0.0.0:8265 address in your browser.
 2) In the tdarr installation directory > Tdarr_Node folder Run the Tdarr_Node.exe
+3) In the tdarr webui go to tab Plugins: search for "075a" then on the result "Video Transcode Customizable" click copy to local, click the local tab on the top.
+4) Click main tab Libraries, create a library, define source.
+5) In the library settings go to transcode tab, click  on and disable all plugins except the "new file size check" and the "Video transcode Customizable" plugins.
+6) Click "Video transcode Customizable" plugin and enable it, in the inputs: codecs to exclude "av1", cli "handbrake", transcode arguments '--preset-import-file "C::\tdarr\qsv-av1-30.json" -Z "qsv-av1" --all-audio --all-subtitles' (replace the "qsv-av1-30.json" with your handbrake preset file name, and the "qsv-av1" with the name of the preset that you saved as in handbrake)
+7) 
