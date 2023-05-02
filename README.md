@@ -9,10 +9,10 @@ Hardware needed:
 2) The Arc GPU needs to be preferably in PCIE slot 1 on the motherboard, and the RESIZABLE BAR needs to be enabled in the bios
 
 Download dependencies:
-Intel Graphics Driver https://www.intel.com/content/www/us/en/products/docs/discrete-gpus/arc/software/drivers.html
-Handbrake 1.6.1 Gui https://handbrake.fr/downloads.php "Download (x64 64 bit)"
-Handbrake 1.6.1 CLI https://handbrake.fr/downloads.php "Command Line Version"
-Tdarr https://home.tdarr.io/download/
+1) Intel Graphics Driver https://www.intel.com/content/www/us/en/products/docs/discrete-gpus/arc/software/drivers.html
+2) Handbrake 1.6.1 Gui https://handbrake.fr/downloads.php "Download (x64 64 bit)"
+3) Handbrake 1.6.1 CLI https://handbrake.fr/downloads.php "Command Line Version"
+4) Tdarr https://home.tdarr.io/download/
 
 Install Dependencies:
 1) Install Intel ARC Gpu drivers
