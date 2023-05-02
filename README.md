@@ -37,9 +37,10 @@ Configure the tdarr server:
 2) In the tdarr installation directory > Tdarr_Node folder Run the Tdarr_Node.exe
 3) In the tdarr webui go to tab Plugins: search for "075a" then on the result "Video Transcode Customizable" click copy to local, click the local tab on the top.
 4) Click main tab Libraries, create a library, define source, click options >  Scan fresh.
-5) In the library settings go to transcode tab, click  on and disable all plugins except the "new file size check" and the "Video transcode Customizable" plugins.
-6) Click "Video transcode Customizable" plugin and enable it, in the inputs: codecs to exclude "av1", cli "handbrake", transcode arguments '--preset-import-file "C::\tdarr\qsv-av1-30.json" -Z "qsv-av1" --all-audio --all-subtitles' (replace the "qsv-av1-30.json" with your handbrake preset file name, and the "qsv-av1" with the name of the preset that you saved as in handbrake), output container ".mkv"
-7) In main tab Tdarr: Under Nodes: click your node to the right of the "All" button, click options, change "Any (nvenc,qsv,vaapi)" to "qsv", enable "Allow all GPU workers to do CPU tasks"
-8) Add 3 GPU workers to the right of the "Transcode:", add 1 CPU worker to health check.
-9) The transcoding should begin now, the progress bar should go showly up for each job, if it completes instantly something is wrong, on the bottom of the screen should be "Transcode: success/not required" number rising.
-10) If working correctly, in library settings > output folder > enable delete source file
+5) Set cache folder, make sure that the node if on a different computer also has this directory.
+6) In the library settings go to transcode tab, click  on and disable all plugins except the "new file size check" and the "Video transcode Customizable" plugins.
+7) Click "Video transcode Customizable" plugin and enable it, in the inputs: codecs to exclude "av1", cli "handbrake", transcode arguments '--preset-import-file "C::\tdarr\qsv-av1-30.json" -Z "qsv-av1" --all-audio --all-subtitles' (replace the "qsv-av1-30.json" with your handbrake preset file name, and the "qsv-av1" with the name of the preset that you saved as in handbrake), output container ".mkv"
+8) In main tab Tdarr: Under Nodes: click your node to the right of the "All" button, click options, change "Any (nvenc,qsv,vaapi)" to "qsv", enable "Allow all GPU workers to do CPU tasks"
+9) Add 3 GPU workers to the right of the "Transcode:", add 1 CPU worker to health check.
+10) The transcoding should begin now, the progress bar should go showly up for each job, if it completes instantly something is wrong, on the bottom of the screen should be "Transcode: success/not required" number rising.
+11) If working correctly, in library settings > output folder > enable delete source file
